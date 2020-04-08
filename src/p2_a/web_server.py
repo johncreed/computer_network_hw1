@@ -28,10 +28,9 @@ while True:
         # TODO end
         print(message, flush=True)
 
-        filename = message.split()[1].decode('utf-8')
-        file_path = os.path.join('html', filename.strip('/'))
-        print(file_path)
-        f = open(file_path)
+        filename = message.split()[1].decode('utf-8').strip('/')
+        print(filename)
+        f = open(filename)
 
         # Read data from the file that the client requested
         # Split the data into lines for future transmission
