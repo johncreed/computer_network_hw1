@@ -9,7 +9,7 @@ serverSocket = socket(AF_INET, SOCK_STREAM)
 #Prepare a sever socket
 port = rd.randint(1024, 9999)
 print("Use port {}".format(port), flush=True)
-serverSocket.bind(('', port))
+serverSocket.bind(('127.0.0.1', port))
 serverSocket.listen(0)
 
 while True:
@@ -44,21 +44,15 @@ while True:
 
         #Send one HTTP header line into socket
         # TODO start
-
         # send HTTP status to client
-
-        connectionSocket.send(b'HTTP/1.0 200 OK\r\n')
-
+        response_msg = b'HTTP/1.0 200 OK\r\n'
         # send content type to client
-
-        connectionSocket.send(b'Content-Type: text/html\r\n\r\n')
-
+        response_msg += b'Content-Type: text/html\r\n\r\n'
         # TODO end
 
         # Send the content of the requested file to the client
-        for i in range(0, len(outputdata)):
-            connectionSocket.send(outputdata[i].encode())
-        connectionSocket.send("\r\n".encode())
+        response_msg += outputdata.encode()
+        connectionSocket.send(response_msg)
 
         connectionSocket.close()
     except IOError:
