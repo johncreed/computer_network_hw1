@@ -19,12 +19,11 @@ python client_server.py
 # Funcion supported by server
 
 Definition:
-
-NONZERO = (\[1-9\]\[0-9\]*) | (0.\[0-9\]*[1-9])  | ([1-9]\[0-9\]*.\[0-9\]+)
-
+```text
+NONZERO = ([1-9][0-9]*) | (0.[0-9]*[1-9])  | ([1-9][0-9]*.[0-9]+)
 NUM = NONZERO | 0
-
-INT = (\[1-9\]+\[0-9\]*) | 0
+INT = ([1-9]+[0-9]*) | 0
+```
 
 | Operator name | Operator | Format | Example |  Result |
 |---------------|----------|--------|---------|---------|
