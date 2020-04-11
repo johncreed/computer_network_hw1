@@ -1,6 +1,5 @@
 operators = { '+', '-', '*', '/', '**', '%', '&', '|', '!'}
 def check_syntax( tokens ):
-
     res = False
     if( len(tokens) == 3 ):
         a, op, b = tokens
@@ -9,12 +8,16 @@ def check_syntax( tokens ):
             bb = float(b)
         except ValueError:
             return res
-
         if( op in operators ):
             res = True
     elif(len(tokens) == 2):
         a, op = tokens
-
+        try:
+            aa = float(a)
+        except ValueError:
+            return res
+        if( op == '!' ):
+            res = True
     return res
 
 #operators = { '+', '-', '*', '/', '**', '%', '&', '|', '!'}
@@ -53,7 +56,7 @@ def solve(tokens):
             except ZeroDivisionError as e:
                 return "Syntax Error: {}".format(e)
         if( op == '&' ):
-            if( aa not in {0,1} or bb not in {0, 1} ):
+            if( a not in {'0', '1'} or b not in {'0', '1'} ):
                 return "Syntax Error: support only \'[01] | [01]\'"
             aa = int(aa)
             bb = int(bb)
@@ -61,7 +64,7 @@ def solve(tokens):
                 return 1
             return 0
         if( op == '|' ):
-            if( aa not in {0,1} or bb not in {0, 1} ):
+            if( a not in {'0', '1'} or b not in {'0', '1'} ):
                 return "Syntax Error: support only \'[01] | [01]\'"
             aa = int(aa)
             bb = int(bb)
@@ -85,7 +88,7 @@ def solve(tokens):
 def parse_request( string ):
     tokens = string.strip().split()
 
-    if( check_syntax(tokens) == -1 ):
+    if( check_syntax(tokens) == False ):
         return "Syntax Error"
 
     return str(solve(tokens))
