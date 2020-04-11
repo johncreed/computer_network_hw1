@@ -19,8 +19,11 @@ python client_server.py
 # Funcion supported by server
 
 Definition:
+
 NONZERO = (\[1-9\]\[0-9\]*) | (0.\[0-9\]*[1-9])  | ([1-9]\[0-9\]*.\[0-9\]+)
+
 NUM = NONZERO | 0
+
 INT = (\[1-9\]+\[0-9\]*) | 0
 
 | Operator name | Operator | Format | Example |  Result |
@@ -33,5 +36,5 @@ INT = (\[1-9\]+\[0-9\]*) | 0
 | Mod | % | INT % INT | 12 % 10 | 2 |
 | AND | & | \[01\] & \[01\] | 1 & 1 | 1 |
 | OR | \| | \[01\] \| \[01\] | 0 \| 1 | 1 |
-| Factorial | INT ! | 4 ! | 24 |
+| Factorial | ! | INT ! | 4 ! | 24 |
 
