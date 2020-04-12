@@ -37,3 +37,7 @@ INT = ([1-9]+[0-9]*) | 0
 | OR | \| | \[01\] \| \[01\] | 0 \| 1 | 1 |
 | Factorial | ! | INT ! | 4 ! | 24 |
 
+# Screenshot
+
+![alt text](https://github.com/johncreed/computer_network_hw1/blob/master/src/p1/p1-screanshot.png)
+
