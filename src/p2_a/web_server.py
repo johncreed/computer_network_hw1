@@ -22,6 +22,9 @@ while True:
     try:
         # Receive http request from the clinet
         request, headers, body = request_read( connectionSocket )
+        print("----------- client request ------------")
+        print(request, headers, body)
+        print("---------------------------------------")
 
         filename = request['url'].strip('/')
         print(filename)
