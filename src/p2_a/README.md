@@ -4,6 +4,8 @@
 python web_server.py
 ```
 
+Web server will be hosted on 127.0.0.1::8888
+
 # Page Url
 
 index.html: [127.0.0.1:8888/index.html](http://127.0.0.1:8888/index.html)

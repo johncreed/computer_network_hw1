@@ -39,5 +39,39 @@ INT = ([1-9]+[0-9]*) | 0
 
 # Screenshot
 
-![alt text](https://github.com/johncreed/computer_network_hw1/blob/master/src/p1/p1-screanshot.png)
+## Plus:
+
+![alt text](https://github.com/johncreed/computer_network_hw1/blob/master/screenshots/p1/plus.png)
+
+## Minus:
+
+![alt text](https://github.com/johncreed/computer_network_hw1/blob/master/screenshots/p1/minus.png)
+
+## Multiply:
+
+![alt text](https://github.com/johncreed/computer_network_hw1/blob/master/screenshots/p1/mult.png)
+
+## Divide:
+
+![alt text](https://github.com/johncreed/computer_network_hw1/blob/master/screenshots/p1/div.png)
+
+## Power:
+
+![alt text](https://github.com/johncreed/computer_network_hw1/blob/master/screenshots/p1/power.png)
+
+## Mod:
+
+![alt text](https://github.com/johncreed/computer_network_hw1/blob/master/screenshots/p1/mod.png)
+
+## AND:
+
+![alt text](https://github.com/johncreed/computer_network_hw1/blob/master/screenshots/p1/and.png)
+
+## OR:
+
+![alt text](https://github.com/johncreed/computer_network_hw1/blob/master/screenshots/p1/or.png)
+
+## Factorial:
+
+![alt text](https://github.com/johncreed/computer_network_hw1/blob/master/screenshots/p1/factorial.png)
 
